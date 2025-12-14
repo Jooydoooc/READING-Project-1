@@ -41,305 +41,20 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* Login Page */
-        .login-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .login-card {
-            background: white;
-            padding: 40px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            width: 100%;
-            max-width: 420px;
-            text-align: center;
-            animation: slideUp 0.6s ease;
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .logo {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .logo-text {
-            font-family: 'Poppins', sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 20px;
-        }
-
-        .tagline {
-            color: var(--gray);
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
-
-        .input-group {
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        .input-icon {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gray);
-        }
-
-        input {
-            width: 100%;
-            padding: 15px 15px 15px 45px;
-            border: 2px solid var(--light-gray);
-            border-radius: 10px;
-            font-size: 16px;
-            transition: var(--transition);
-        }
-
-        input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            width: 100%;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.3);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .divider {
-            margin: 30px 0;
-            position: relative;
-            text-align: center;
-            color: var(--gray);
-        }
-
-        .divider:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            width: 45%;
-            height: 1px;
-            background: var(--light-gray);
-        }
-
-        .divider:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 50%;
-            width: 45%;
-            height: 1px;
-            background: var(--light-gray);
-        }
-
-        /* Main Menu */
-        .main-container {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .header {
-            background: white;
-            padding: 20px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--dark);
-        }
-
-        .user-avatar {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-
-        .menu-card {
-            background: white;
-            padding: 30px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            text-align: center;
-            transition: var(--transition);
-            cursor: pointer;
-            border: 2px solid transparent;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .menu-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .menu-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-
-        .menu-desc {
-            color: var(--gray);
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        /* Passage Selection */
-        .selection-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .passage-card {
-            background: white;
-            padding: 25px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            cursor: pointer;
-            border: 2px solid transparent;
-        }
-
-        .passage-card:hover {
-            transform: translateY(-3px);
-            border-color: var(--primary);
-        }
-
-        .passage-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border-radius: 50%;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .passage-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .passage-meta {
-            display: flex;
-            justify-content: space-between;
-            color: var(--gray);
-            font-size: 14px;
-            margin-top: 15px;
-        }
-
-        /* Reading Interface */
-        .reading-interface {
-            display: none;
+        /* Reading Interface - Split Screen */
+        .reading-container {
             background: white;
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
             overflow: hidden;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .reading-header {
@@ -349,6 +64,43 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .test-info h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .test-info p {
+            font-size: 14px;
+            opacity: 0.9;
         }
 
         .timer {
@@ -371,95 +123,185 @@
             color: #ffa8a9;
         }
 
-        .reading-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+        /* Split Screen Content */
+        .split-screen {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .passage-panel {
+            flex: 0 0 50%;
+            overflow-y: auto;
             padding: 30px;
-            max-height: 70vh;
-            overflow-y: auto;
-        }
-
-        @media (max-width: 768px) {
-            .reading-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .passage-container {
             border-right: 2px solid var(--light-gray);
-            padding-right: 30px;
+            position: relative;
         }
 
-        @media (max-width: 768px) {
-            .passage-container {
-                border-right: none;
-                border-bottom: 2px solid var(--light-gray);
-                padding-right: 0;
-                padding-bottom: 30px;
-            }
-        }
-
-        .questions-container {
+        .questions-panel {
+            flex: 0 0 50%;
             overflow-y: auto;
+            padding: 30px;
         }
 
-        .passage-text {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #333;
+        /* Resize Handle */
+        .resize-handle {
+            position: absolute;
+            top: 0;
+            right: -5px;
+            width: 10px;
+            height: 100%;
+            background: var(--light-gray);
+            cursor: col-resize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
         }
 
-        .passage-text p {
-            margin-bottom: 20px;
+        .resize-handle:hover {
+            background: var(--primary);
         }
 
-        .question-group {
-            margin-bottom: 30px;
+        .resize-handle::after {
+            content: '⋮';
+            color: var(--gray);
+            font-size: 12px;
+            letter-spacing: 2px;
         }
 
-        .question-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: var(--dark);
-            padding-bottom: 8px;
+        .resize-handle:hover::after {
+            color: white;
+        }
+
+        /* Passage Content */
+        .passage-header {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
             border-bottom: 2px solid var(--light-gray);
         }
 
-        .question-item {
-            margin-bottom: 15px;
-            padding: 15px;
+        .passage-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .instruction-box {
             background: var(--light);
+            padding: 15px;
             border-radius: 8px;
             border-left: 4px solid var(--primary);
+            margin-bottom: 25px;
+        }
+
+        .instruction-box i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .passage-content {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .passage-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight-line {
+            background: rgba(67, 97, 238, 0.1);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        /* Questions */
+        .question-type {
+            margin-bottom: 30px;
+            background: var(--light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--light-gray);
+        }
+
+        .question-type-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .question-type-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .question-type-instruction {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .question-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .question-item:hover {
+            border-color: var(--primary);
         }
 
         .question-number {
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .question-number .status {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--light-gray);
+        }
+
+        .question-number .status.answered {
+            background: var(--success);
         }
 
         .answer-options {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
 
         .radio-group {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 6px;
+            padding: 10px 15px;
+            border-radius: 8px;
             transition: var(--transition);
         }
 
         .radio-group:hover {
-            background: rgba(67, 97, 238, 0.1);
+            background: rgba(67, 97, 238, 0.05);
         }
 
         .radio-group input[type="radio"] {
@@ -473,6 +315,7 @@
             border-radius: 50%;
             position: relative;
             transition: var(--transition);
+            flex-shrink: 0;
         }
 
         .radio-group input[type="radio"]:checked + .custom-radio {
@@ -494,11 +337,12 @@
         .radio-label {
             font-size: 15px;
             color: var(--dark);
+            font-weight: 500;
         }
 
         .text-input {
             width: 100%;
-            padding: 12px;
+            padding: 12px 15px;
             border: 2px solid var(--light-gray);
             border-radius: 8px;
             font-size: 15px;
@@ -508,24 +352,174 @@
         .text-input:focus {
             outline: none;
             border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
         }
 
-        .submit-section {
-            padding: 20px 30px;
-            background: var(--light);
+        /* Progress Tabs */
+        .progress-tabs {
+            display: flex;
+            background: white;
             border-top: 2px solid var(--light-gray);
+            padding: 15px 30px;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .progress-tab {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: var(--light);
+            color: var(--gray);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .progress-tab:hover {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary);
+        }
+
+        .progress-tab.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .progress-tab .count {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        .progress-tab.active .count {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Question Navigation */
+        .question-nav {
+            position: fixed;
+            bottom: 120px;
+            right: 30px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 15px;
+            z-index: 100;
+            width: 300px;
+        }
+
+        .question-nav-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .question-nav-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .question-nav-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+
+        .question-nav-item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            background: var(--light);
+            color: var(--gray);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .question-nav-item:hover {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary);
+        }
+
+        .question-nav-item.answered {
+            background: rgba(76, 201, 240, 0.2);
+            color: var(--success);
+        }
+
+        .question-nav-item.current {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Submit Section */
+        .submit-section {
+            background: white;
+            border-top: 2px solid var(--light-gray);
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .progress-stats {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .progress-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .progress-value {
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .progress-label {
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        .progress-item.answered .progress-value {
+            color: var(--success);
+        }
+
+        .progress-item.unanswered .progress-value {
+            color: var(--gray);
+        }
+
+        .progress-item.time .progress-value {
+            color: var(--primary);
+        }
+
+        .progress-bar-container {
+            flex-grow: 1;
+            margin: 0 30px;
         }
 
         .progress-bar {
-            flex-grow: 1;
             height: 8px;
             background: var(--light-gray);
             border-radius: 4px;
             overflow: hidden;
-            margin: 0 20px;
         }
 
         .progress-fill {
@@ -550,6 +544,11 @@
             animation: fadeIn 0.3s ease;
         }
 
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         .modal-content {
             background: white;
             padding: 40px;
@@ -558,6 +557,17 @@
             width: 90%;
             text-align: center;
             animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .modal-icon {
@@ -586,23 +596,50 @@
             justify-content: center;
         }
 
-        /* Back button */
-        .back-button {
+        /* Buttons */
+        .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
-            color: var(--primary);
-            background: none;
+            padding: 12px 24px;
             border: none;
-            font-size: 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
-            padding: 8px 16px;
-            border-radius: 6px;
             transition: var(--transition);
+            text-decoration: none;
         }
 
-        .back-button:hover {
-            background: rgba(67, 97, 238, 0.1);
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #3ab4d9;
         }
 
         /* Notification */
@@ -668,379 +705,439 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Utility classes */
-        .hidden {
-            display: none !important;
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--box-shadow);
+            z-index: 99;
+            transition: var(--transition);
         }
 
-        .show {
-            display: block !important;
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            background: var(--primary-dark);
         }
 
-        .flex {
-            display: flex !important;
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .split-screen {
+                flex-direction: column;
+            }
+            
+            .passage-panel {
+                flex: 0 0 40%;
+                border-right: none;
+                border-bottom: 2px solid var(--light-gray);
+            }
+            
+            .questions-panel {
+                flex: 0 0 60%;
+            }
+            
+            .resize-handle {
+                top: auto;
+                bottom: -5px;
+                right: 0;
+                width: 100%;
+                height: 10px;
+                cursor: row-resize;
+            }
+            
+            .resize-handle::after {
+                content: '⋯';
+                letter-spacing: 5px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .reading-container {
+                height: 90vh;
+            }
+            
+            .passage-panel,
+            .questions-panel {
+                padding: 15px;
+            }
+            
+            .question-nav {
+                display: none;
+            }
+            
+            .submit-section {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .progress-bar-container {
+                width: 100%;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Login Page -->
-    <div class="login-container" id="loginPage">
-        <div class="login-card">
-            <div class="logo">
-                <i class="fas fa-book-open"></i>
-            </div>
-            <h1 class="logo-text">IELTS Reading Pro</h1>
-            <p class="tagline">Master IELTS Reading with Smart Mock Tests</p>
-            
-            <div class="input-group">
-                <i class="input-icon fas fa-user"></i>
-                <input type="text" id="username" placeholder="Enter your name" required>
-            </div>
-            
-            <div class="input-group">
-                <i class="input-icon fas fa-envelope"></i>
-                <input type="email" id="email" placeholder="Enter your email" required>
-            </div>
-            
-            <button class="btn btn-primary" onclick="login()">
-                <i class="fas fa-sign-in-alt"></i> Start Practicing
-            </button>
-            
-            <div class="divider">or</div>
-            
-            <p style="color: var(--gray); font-size: 14px; margin-top: 20px;">
-                <i class="fas fa-info-circle"></i> No password required. Your progress will be tracked.
-            </p>
-        </div>
-    </div>
-
-    <!-- Main Menu -->
-    <div class="container main-container" id="mainMenu">
-        <div class="header">
-            <div>
-                <h1 style="font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: 700; color: var(--dark);">
-                    IELTS Reading Mock Tests
-                </h1>
-                <p style="color: var(--gray); font-size: 14px; margin-top: 5px;">
-                    Select your practice mode
-                </p>
-            </div>
-            <div class="user-info">
-                <div class="user-avatar" id="userAvatar">U</div>
-                <div>
-                    <div style="font-weight: 600;" id="userName">User</div>
-                    <div style="font-size: 12px; color: var(--gray);">IELTS Candidate</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-grid">
-            <div class="menu-card" onclick="showPassageSelection()">
-                <div class="menu-icon">
-                    <i class="fas fa-file-alt"></i>
-                </div>
-                <h2 class="menu-title">Individual Passages</h2>
-                <p class="menu-desc">Practice with single reading passages one at a time</p>
-                <button class="btn btn-secondary">
-                    <i class="fas fa-play"></i> Start Practice
-                </button>
-            </div>
-
-            <div class="menu-card" onclick="startFullReading()">
-                <div class="menu-icon">
-                    <i class="fas fa-clipboard-list"></i>
-                </div>
-                <h2 class="menu-title">Full Reading Test</h2>
-                <p class="menu-desc">Complete 3-passage test with 60-minute timer</p>
-                <button class="btn btn-secondary">
-                    <i class="fas fa-hourglass-start"></i> Start Test
-                </button>
-            </div>
-        </div>
-
-        <div style="background: white; padding: 20px; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
-            <h3 style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 15px; color: var(--dark);">
-                <i class="fas fa-chart-line"></i> Your Progress
-            </h3>
-            <div style="display: flex; gap: 30px;">
-                <div style="text-align: center;">
-                    <div style="font-size: 32px; font-weight: 700; color: var(--primary);">0</div>
-                    <div style="font-size: 14px; color: var(--gray);">Tests Completed</div>
-                </div>
-                <div style="text-align: center;">
-                    <div style="font-size: 32px; font-weight: 700; color: var(--secondary);">0%</div>
-                    <div style="font-size: 14px; color: var(--gray);">Average Score</div>
-                </div>
-                <div style="text-align: center;">
-                    <div style="font-size: 32px; font-weight: 700; color: var(--accent);">00:00</div>
-                    <div style="font-size: 14px; color: var(--gray);">Time Practiced</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Passage Selection -->
-    <div class="container hidden" id="passageSelection">
-        <button class="back-button" onclick="showMainMenu()">
-            <i class="fas fa-arrow-left"></i> Back to Menu
-        </button>
-        
-        <h1 style="font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 700; margin: 20px 0; color: var(--dark);">
-            Select a Passage
-        </h1>
-        <p style="color: var(--gray); margin-bottom: 30px;">
-            Choose one passage to practice. Each passage has 13-14 questions.
-        </p>
-
-        <div class="selection-grid">
-            <div class="passage-card" onclick="startPassage(1)">
-                <div class="passage-number">1</div>
-                <h3 class="passage-title">Building a New Future</h3>
-                <p style="color: var(--gray); font-size: 14px; line-height: 1.6;">
-                    Agriculture in New Zealand has changed over time, some buildings once associated with farming have found new uses.
-                </p>
-                <div class="passage-meta">
-                    <span><i class="fas fa-clock"></i> 20 min</span>
-                    <span><i class="fas fa-question-circle"></i> 13 questions</span>
-                </div>
-            </div>
-
-            <div class="passage-card" onclick="startPassage(2)">
-                <div class="passage-number">2</div>
-                <h3 class="passage-title">The History of Glass</h3>
-                <p style="color: var(--gray); font-size: 14px; line-height: 1.6;">
-                    From ancient civilizations to modern technology, the story of glass manufacturing and its impact on society.
-                </p>
-                <div class="passage-meta">
-                    <span><i class="fas fa-clock"></i> 20 min</span>
-                    <span><i class="fas fa-question-circle"></i> 13 questions</span>
-                </div>
-            </div>
-
-            <div class="passage-card" onclick="startPassage(3)">
-                <div class="passage-number">3</div>
-                <h3 class="passage-title">Climate Change & Coral Reefs</h3>
-                <p style="color: var(--gray); font-size: 14px; line-height: 1.6;">
-                    The impact of climate change on marine ecosystems, focusing on coral bleaching and conservation efforts.
-                </p>
-                <div class="passage-meta">
-                    <span><i class="fas fa-clock"></i> 20 min</span>
-                    <span><i class="fas fa-question-circle"></i> 14 questions</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Reading Interface -->
-    <div class="container reading-interface" id="readingInterface">
-        <div class="reading-header">
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <button class="back-button" onclick="exitReading()" style="color: white; border: 1px solid rgba(255,255,255,0.3);">
-                    <i class="fas fa-arrow-left"></i> Exit
-                </button>
-                <div>
-                    <h2 id="passageTitle" style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600;">Building a New Future</h2>
-                    <p style="font-size: 14px; opacity: 0.9;">IELTS Academic Reading</p>
+    <div class="container">
+        <div class="reading-container">
+            <!-- Header -->
+            <div class="reading-header">
+                <div class="header-left">
+                    <button class="back-button" onclick="exitReading()">
+                        <i class="fas fa-arrow-left"></i> Exit
+                    </button>
+                    <div class="test-info">
+                        <h2 id="passageTitle">Building a New Future</h2>
+                        <p>IELTS Academic Reading • Passage 1</p>
+                    </div>
+                </div>
+                <div class="timer" id="timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="timeDisplay">20:00</span>
                 </div>
             </div>
-            <div class="timer" id="timer">
-                <i class="fas fa-clock"></i>
-                <span id="timeDisplay">20:00</span>
+
+            <!-- Split Screen -->
+            <div class="split-screen">
+                <!-- Left: Passage -->
+                <div class="passage-panel" id="passagePanel">
+                    <div class="passage-header">
+                        <h1>READING PASSAGE 1</h1>
+                        <p>You should spend about 20 minutes on <strong>Questions 1-13</strong>, which are based on Reading Passage 1.</p>
+                    </div>
+
+                    <div class="instruction-box">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Instructions:</strong> Read the passage carefully and answer the questions on the right side.
+                    </div>
+
+                    <div class="passage-content" id="passageContent">
+                        <!-- Passage content will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Resize Handle -->
+                <div class="resize-handle" id="resizeHandle"></div>
+
+                <!-- Right: Questions -->
+                <div class="questions-panel" id="questionsPanel">
+                    <!-- Question Type 1: True/False/Not Given -->
+                    <div class="question-type" id="trueFalseSection">
+                        <div class="question-type-header">
+                            <h3 class="question-type-title">Questions 1-5</h3>
+                            <span class="question-count">5 questions</span>
+                        </div>
+                        <p class="question-type-instruction">
+                            <i class="fas fa-question-circle"></i>
+                            Do the following statements agree with the information given in Reading Passage 1?<br>
+                            Write <strong>TRUE</strong>, <strong>FALSE</strong>, or <strong>NOT GIVEN</strong>.
+                        </p>
+
+                        <!-- Questions 1-5 -->
+                        <div class="question-item" id="q1">
+                            <div class="question-number">
+                                <span>Question 1</span>
+                                <span class="status"></span>
+                            </div>
+                            <p>Many of the Europeans who first settled in the Taranaki region of New Zealand were descended from dairy farmers.</p>
+                            <div class="answer-options">
+                                <label class="radio-group">
+                                    <input type="radio" name="q1" value="TRUE" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">TRUE</span>
+                                </label>
+                                <label class="radio-group">
+                                    <input type="radio" name="q1" value="FALSE" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">FALSE</span>
+                                </label>
+                                <label class="radio-group">
+                                    <input type="radio" name="q1" value="NOT GIVEN" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">NOT GIVEN</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="question-item" id="q2">
+                            <div class="question-number">
+                                <span>Question 2</span>
+                                <span class="status"></span>
+                            </div>
+                            <p>There was an increase in land used for dairy farming in Taranaki in the 1860s.</p>
+                            <div class="answer-options">
+                                <label class="radio-group">
+                                    <input type="radio" name="q2" value="TRUE" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">TRUE</span>
+                                </label>
+                                <label class="radio-group">
+                                    <input type="radio" name="q2" value="FALSE" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">FALSE</span>
+                                </label>
+                                <label class="radio-group">
+                                    <input type="radio" name="q2" value="NOT GIVEN" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">NOT GIVEN</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="question-item" id="q3">
+                            <div class="question-number">
+                                <span>Question 3</span>
+                                <span class="status"></span>
+                            </div>
+                            <p>In the 1860s, butter had to be eaten within a few days of being made.</p>
+                            <div class="answer-options">
+                                <label class="radio-group">
+                                    <input type="radio" name="q3" value="TRUE" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">TRUE</span>
+                                </label>
+                                <label class="radio-group">
+                                    <input type="radio" name="q3" value="FALSE" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">FALSE</span>
+                                </label>
+                                <label class="radio-group">
+                                    <input type="radio" name="q3" value="NOT GIVEN" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">NOT GIVEN</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="question-item" id="q4">
+                            <div class="question-number">
+                                <span>Question 4</span>
+                                <span class="status"></span>
+                            </div>
+                            <p>Chew Chong's early stores in Taranaki quickly made a profit.</p>
+                            <div class="answer-options">
+                                <label class="radio-group">
+                                    <input type="radio" name="q4" value="TRUE" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">TRUE</span>
+                                </label>
+                                <label class="radio-group">
+                                    <input type="radio" name="q4" value="FALSE" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">FALSE</span>
+                                </label>
+                                <label class="radio-group">
+                                    <input type="radio" name="q4" value="NOT GIVEN" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">NOT GIVEN</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="question-item" id="q5">
+                            <div class="question-number">
+                                <span>Question 5</span>
+                                <span class="status"></span>
+                            </div>
+                            <p>In the 1880s, Taranaki milk was the same standard each time it was produced.</p>
+                            <div class="answer-options">
+                                <label class="radio-group">
+                                    <input type="radio" name="q5" value="TRUE" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">TRUE</span>
+                                </label>
+                                <label class="radio-group">
+                                    <input type="radio" name="q5" value="FALSE" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">FALSE</span>
+                                </label>
+                                <label class="radio-group">
+                                    <input type="radio" name="q5" value="NOT GIVEN" onchange="updateProgress()">
+                                    <span class="custom-radio"></span>
+                                    <span class="radio-label">NOT GIVEN</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question Type 2: Note Completion -->
+                    <div class="question-type" id="noteCompletionSection">
+                        <div class="question-type-header">
+                            <h3 class="question-type-title">Questions 6-13</h3>
+                            <span class="question-count">8 questions</span>
+                        </div>
+                        <p class="question-type-instruction">
+                            <i class="fas fa-edit"></i>
+                            Complete the notes below. Choose <strong>ONE WORD ONLY</strong> from the passage for each answer.
+                        </p>
+
+                        <div class="instruction-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <strong>Note:</strong> The dairy factories of Taranaki
+                        </div>
+
+                        <!-- Questions 6-13 -->
+                        <div class="question-item" id="q6">
+                            <div class="question-number">
+                                <span>Question 6</span>
+                                <span class="status"></span>
+                            </div>
+                            <p><strong>Chew Chong's 1887 factory</strong><br>
+                            • was the first of its sort in the region<br>
+                            • was given a significant <input type="text" class="text-input" name="q6" placeholder="(6)" oninput="updateProgress()" maxlength="20">
+                            because of the modern techniques used</p>
+                        </div>
+
+                        <div class="question-item" id="q7">
+                            <div class="question-number">
+                                <span>Question 7</span>
+                                <span class="status"></span>
+                            </div>
+                            <p>• sold butter covered in <input type="text" class="text-input" name="q7" placeholder="(7)" oninput="updateProgress()" maxlength="20">
+                            for the first time</p>
+                        </div>
+
+                        <div class="question-item" id="q8">
+                            <div class="question-number">
+                                <span>Question 8</span>
+                                <span class="status"></span>
+                            </div>
+                            <p><strong>Factories in the 1890s and early 1900s</strong><br>
+                            • farmers set up special companies in order to share the <input type="text" class="text-input" name="q8" placeholder="(8)" oninput="updateProgress()" maxlength="20">
+                            from milk sales</p>
+                        </div>
+
+                        <div class="question-item" id="q9">
+                            <div class="question-number">
+                                <span>Question 9</span>
+                                <span class="status"></span>
+                            </div>
+                            <p>• many factories were needed because the local <input type="text" class="text-input" name="q9" placeholder="(9)" oninput="updateProgress()" maxlength="20">
+                            were in bad condition</p>
+                        </div>
+
+                        <div class="question-item" id="q10">
+                            <div class="question-number">
+                                <span>Question 10</span>
+                                <span class="status"></span>
+                            </div>
+                            <p>• most factories were built of <input type="text" class="text-input" name="q10" placeholder="(10)" oninput="updateProgress()" maxlength="20">
+                            so they were very strong</p>
+                        </div>
+
+                        <div class="question-item" id="q11">
+                            <div class="question-number">
+                                <span>Question 11</span>
+                                <span class="status"></span>
+                            </div>
+                            <p><strong>The decline of dairy factories</strong><br>
+                            • companies merged so fewer factories were needed<br>
+                            • the Tawhiti factory is now a <input type="text" class="text-input" name="q11" placeholder="(11)" oninput="updateProgress()" maxlength="20"></p>
+                        </div>
+
+                        <div class="question-item" id="q12">
+                            <div class="question-number">
+                                <span>Question 12</span>
+                                <span class="status"></span>
+                            </div>
+                            <p>• the Kaupokonui factory makes equipment for <input type="text" class="text-input" name="q12" placeholder="(12)" oninput="updateProgress()" maxlength="20"></p>
+                        </div>
+
+                        <div class="question-item" id="q13">
+                            <div class="question-number">
+                                <span>Question 13</span>
+                                <span class="status"></span>
+                            </div>
+                            <p>• the Okato factory once more produces <input type="text" class="text-input" name="q13" placeholder="(13)" oninput="updateProgress()" maxlength="20"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tabs -->
+            <div class="progress-tabs">
+                <div class="progress-tab active" onclick="scrollToSection('trueFalseSection')">
+                    <i class="fas fa-check-circle"></i>
+                    <span>True/False/NG (1-5)</span>
+                    <span class="count" id="trueFalseCount">0/5</span>
+                </div>
+                <div class="progress-tab" onclick="scrollToSection('noteCompletionSection')">
+                    <i class="fas fa-edit"></i>
+                    <span>Note Completion (6-13)</span>
+                    <span class="count" id="noteCompletionCount">0/8</span>
+                </div>
+                <div class="progress-tab" onclick="showQuestionNavigation()">
+                    <i class="fas fa-list-ol"></i>
+                    <span>All Questions</span>
+                    <span class="count" id="totalCount">0/13</span>
+                </div>
+            </div>
+
+            <!-- Submit Section -->
+            <div class="submit-section">
+                <div class="progress-stats">
+                    <div class="progress-item answered">
+                        <div class="progress-value" id="answeredValue">0</div>
+                        <div class="progress-label">Answered</div>
+                    </div>
+                    <div class="progress-item unanswered">
+                        <div class="progress-value" id="unansweredValue">13</div>
+                        <div class="progress-label">Remaining</div>
+                    </div>
+                    <div class="progress-item time">
+                        <div class="progress-value" id="timeValue">20:00</div>
+                        <div class="progress-label">Time Left</div>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="clearAllAnswers()">
+                        <i class="fas fa-eraser"></i> Clear All
+                    </button>
+                    <button class="btn btn-primary" onclick="submitAnswers()">
+                        <i class="fas fa-paper-plane"></i> Submit Answers
+                    </button>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="reading-content">
-            <!-- Passage Container -->
-            <div class="passage-container">
-                <div class="passage-text" id="passageText">
-                    <!-- Passage content will be inserted here -->
-                </div>
-            </div>
-
-            <!-- Questions Container -->
-            <div class="questions-container">
-                <div class="question-group">
-                    <h3 class="question-title">Questions 1-5</h3>
-                    <p style="color: var(--gray); font-size: 14px; margin-bottom: 15px;">
-                        Do the following statements agree with the information given in the Reading Passage?
-                    </p>
-                    
-                    <div class="question-item">
-                        <div class="question-number">1. Many of the Europeans who first settled in the Taranaki region of New Zealand were descended from dairy farmers.</div>
-                        <div class="answer-options">
-                            <label class="radio-group">
-                                <input type="radio" name="q1" value="TRUE">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">TRUE</span>
-                            </label>
-                            <label class="radio-group">
-                                <input type="radio" name="q1" value="FALSE">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">FALSE</span>
-                            </label>
-                            <label class="radio-group">
-                                <input type="radio" name="q1" value="NOT GIVEN">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">NOT GIVEN</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question-number">2. There was an increase in land used for dairy farming in Taranaki in the 1860s.</div>
-                        <div class="answer-options">
-                            <label class="radio-group">
-                                <input type="radio" name="q2" value="TRUE">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">TRUE</span>
-                            </label>
-                            <label class="radio-group">
-                                <input type="radio" name="q2" value="FALSE">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">FALSE</span>
-                            </label>
-                            <label class="radio-group">
-                                <input type="radio" name="q2" value="NOT GIVEN">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">NOT GIVEN</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question-number">3. In the 1860s, butter had to be eaten within a few days of being made.</div>
-                        <div class="answer-options">
-                            <label class="radio-group">
-                                <input type="radio" name="q3" value="TRUE">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">TRUE</span>
-                            </label>
-                            <label class="radio-group">
-                                <input type="radio" name="q3" value="FALSE">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">FALSE</span>
-                            </label>
-                            <label class="radio-group">
-                                <input type="radio" name="q3" value="NOT GIVEN">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">NOT GIVEN</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question-number">4. Chew Chong's early stores in Taranaki quickly made a profit.</div>
-                        <div class="answer-options">
-                            <label class="radio-group">
-                                <input type="radio" name="q4" value="TRUE">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">TRUE</span>
-                            </label>
-                            <label class="radio-group">
-                                <input type="radio" name="q4" value="FALSE">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">FALSE</span>
-                            </label>
-                            <label class="radio-group">
-                                <input type="radio" name="q4" value="NOT GIVEN">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">NOT GIVEN</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question-number">5. In the 1880s, Taranaki milk was the same standard each time it was produced.</div>
-                        <div class="answer-options">
-                            <label class="radio-group">
-                                <input type="radio" name="q5" value="TRUE">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">TRUE</span>
-                            </label>
-                            <label class="radio-group">
-                                <input type="radio" name="q5" value="FALSE">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">FALSE</span>
-                            </label>
-                            <label class="radio-group">
-                                <input type="radio" name="q5" value="NOT GIVEN">
-                                <span class="custom-radio"></span>
-                                <span class="radio-label">NOT GIVEN</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="question-group">
-                    <h3 class="question-title">Questions 6-13</h3>
-                    <p style="color: var(--gray); font-size: 14px; margin-bottom: 15px;">
-                        Complete the notes below. Choose ONE WORD ONLY from the passage for each answer.
-                    </p>
-                    
-                    <div class="question-item">
-                        <div class="question-number">6. Chew Chong's 1887 factory was given a significant ________ because of the modern techniques used.</div>
-                        <input type="text" class="text-input" name="q6" placeholder="Type your answer here">
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question-number">7. The factory sold butter covered in ________ for the first time.</div>
-                        <input type="text" class="text-input" name="q7" placeholder="Type your answer here">
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question-number">8. Farmers set up special companies in order to share the ________ from milk sales.</div>
-                        <input type="text" class="text-input" name="q8" placeholder="Type your answer here">
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question-number">9. Many factories were needed because the local ________ were in bad condition.</div>
-                        <input type="text" class="text-input" name="q9" placeholder="Type your answer here">
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question-number">10. Most factories were built of ________ so they were very strong.</div>
-                        <input type="text" class="text-input" name="q10" placeholder="Type your answer here">
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question-number">11. The Tawhiti factory is now a ________.</div>
-                        <input type="text" class="text-input" name="q11" placeholder="Type your answer here">
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question-number">12. The Kaupokonui factory makes equipment for ________.</div>
-                        <input type="text" class="text-input" name="q12" placeholder="Type your answer here">
-                    </div>
-
-                    <div class="question-item">
-                        <div class="question-number">13. The Okato factory once more produces ________.</div>
-                        <input type="text" class="text-input" name="q13" placeholder="Type your answer here">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="submit-section">
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <button class="btn btn-secondary" onclick="clearAnswers()">
-                    <i class="fas fa-eraser"></i> Clear All
-                </button>
-                <div style="font-size: 14px; color: var(--gray);">
-                    <span id="answeredCount">0</span> / 13 answered
-                </div>
-            </div>
-            
-            <div style="display: flex; align-items: center; gap: 15px; flex-grow: 1; margin: 0 20px;">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-                <span style="font-size: 14px; color: var(--gray); min-width: 60px;" id="progressPercent">0%</span>
-            </div>
-            
-            <button class="btn btn-primary" onclick="submitTest()">
-                <i class="fas fa-paper-plane"></i> Submit Answers
+    <!-- Question Navigation (Floating) -->
+    <div class="question-nav" id="questionNav" style="display: none;">
+        <div class="question-nav-header">
+            <div class="question-nav-title">Question Navigator</div>
+            <button class="btn btn-secondary" style="padding: 5px 10px; font-size: 12px;" onclick="hideQuestionNavigation()">
+                <i class="fas fa-times"></i>
             </button>
         </div>
+        <div class="question-nav-grid" id="questionNavGrid">
+            <!-- Question numbers will be generated here -->
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
     </div>
 
     <!-- Modal for Submission -->
@@ -1051,7 +1148,9 @@
             </div>
             <h2 class="modal-title">Submit Your Answers?</h2>
             <p class="modal-text">
-                Are you sure you want to submit your answers? Once submitted, you cannot make changes.
+                Are you sure you want to submit your answers? Once submitted, you cannot make changes.<br><br>
+                <strong>Answered:</strong> <span id="modalAnswered">0</span>/13 questions<br>
+                <strong>Time Used:</strong> <span id="modalTimeUsed">0:00</span>
             </p>
             <div class="modal-buttons">
                 <button class="btn btn-secondary" onclick="hideModal()">
@@ -1105,19 +1204,18 @@
     </div>
 
     <script>
-        // User data
-        let currentUser = null;
+        // Global variables
         let timerInterval = null;
         let timeLeft = 1200; // 20 minutes in seconds
-        let currentPassage = 1;
-        let isFullTest = false;
+        let totalQuestions = 13;
+        let currentQuestion = 1;
+        let isResizing = false;
+        let resizeStartX = 0;
+        let passagePanelWidth = 50; // Percentage
 
-        // Passage 1 content
-        const passage1Content = `
-            <p><strong>READING PASSAGE 1</strong></p>
-            <p><em>You should spend about 20 minutes on Questions 1-13, which are based on Reading Passage 1 below.</em></p>
-            
-            <h3 style="margin: 25px 0 15px 0; color: var(--dark);">Building a New Future</h3>
+        // Passage content
+        const passageContent = `
+            <h2 style="margin: 25px 0 15px 0; color: var(--dark);">Building a New Future</h2>
             <p>As agriculture in New Zealand has changed over time, some buildings once associated with the farming industry have found new uses.</p>
             
             <p>The first European settlers arrived in the Taranaki region of New Zealand in 1841. Their initial aim was not to be dairy farmers - who keep cows for their milk and make dairy products such as butter. In fact, the dense bush was cleared to grow commercial crops of wheat. However, most of the settlers came from the English counties of Devon and Cornwall, where for generations their families had been involved in dairy farming, so it was natural for them to keep cows for domestic purposes. Throughout the 1840s women made butter for their families, and any extra was traded at local stores for other goods that they would normally have needed to pay for. By the 1860s some farmers had recognised that the region's future lay in grasslands for dairy cows, not crops, and new dairy farms were created as a result. At the same time, a corresponding growth in farmhouse butter production led to a surplus, so clever merchants began packing butter in barrels, preserving it either in brine or layers of dry salt so that it would last for up to two months, and sending it to other parts of the country.</p>
@@ -1133,120 +1231,37 @@
             <p>While other Taranaki factories are today used for substantially different purposes from milk processing, the Okato factory recently returned to its original function. The factory closed in 1985 and was subsequently used as a youth hostel and an entertainment venue. Then in late 2009, Organic Dairy Ltd. again started to manufacture cheese on the site. A new multi-million dollar plant was built, and once again milk tankers call daily to supply the raw materials. So for at least one of Taranaki's old dairy factories, it seems things have come full circle.</p>
         `;
 
-        // Login function
-        function login() {
-            const username = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
-            
-            if (!username || !email) {
-                showNotification('Please enter your name and email', 'error');
-                return;
-            }
-            
-            currentUser = {
-                name: username,
-                email: email,
-                avatar: username.charAt(0).toUpperCase()
-            };
-            
-            // Update user info
-            document.getElementById('userName').textContent = currentUser.name;
-            document.getElementById('userAvatar').textContent = currentUser.avatar;
-            
-            // Show main menu with animation
-            document.getElementById('loginPage').style.display = 'none';
-            document.getElementById('mainMenu').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('mainMenu').style.opacity = '1';
-            }, 10);
-            
-            showNotification(`Welcome, ${currentUser.name}!`, 'success');
-        }
-
-        // Show main menu
-        function showMainMenu() {
-            hideAllSections();
-            document.getElementById('mainMenu').classList.remove('hidden');
-        }
-
-        // Show passage selection
-        function showPassageSelection() {
-            hideAllSections();
-            document.getElementById('passageSelection').classList.remove('hidden');
-        }
-
-        // Start individual passage
-        function startPassage(passageNumber) {
-            currentPassage = passageNumber;
-            isFullTest = false;
-            timeLeft = 1200; // 20 minutes
-            
-            // Set passage title
-            const titles = {
-                1: 'Building a New Future',
-                2: 'The History of Glass',
-                3: 'Climate Change & Coral Reefs'
-            };
-            document.getElementById('passageTitle').textContent = titles[passageNumber];
-            
+        // Initialize the reading interface
+        function initReadingInterface() {
             // Load passage content
-            if (passageNumber === 1) {
-                document.getElementById('passageText').innerHTML = passage1Content;
-            } else {
-                document.getElementById('passageText').innerHTML = `
-                    <h3 style="margin: 25px 0 15px 0; color: var(--dark);">${titles[passageNumber]}</h3>
-                    <p><em>Passage ${passageNumber} content will be displayed here in the full version.</em></p>
-                    <p>This is a placeholder for Passage ${passageNumber}. In the complete application, this would contain the actual reading passage text.</p>
-                `;
-            }
+            document.getElementById('passageContent').innerHTML = passageContent;
             
-            hideAllSections();
-            document.getElementById('readingInterface').classList.remove('hidden');
-            
-            // Clear previous answers
-            clearAnswers();
-            
-            // Start timer
+            // Initialize timer
+            updateTimerDisplay();
             startTimer();
             
-            // Update progress
-            updateProgress();
-        }
-
-        // Start full reading test
-        function startFullReading() {
-            isFullTest = true;
-            timeLeft = 3600; // 60 minutes for full test
+            // Initialize resize functionality
+            initResizeHandler();
             
-            document.getElementById('passageTitle').textContent = 'Full Reading Test (3 Passages)';
+            // Generate question navigation
+            generateQuestionNavigation();
             
-            // For demo, show passage 1 only
-            document.getElementById('passageText').innerHTML = passage1Content + `
-                <hr style="margin: 40px 0; border: 1px solid var(--light-gray);">
-                <h3 style="margin: 25px 0 15px 0; color: var(--dark);">Passage 2 & 3 would appear here</h3>
-                <p><em>In the full test, all three passages would be displayed here for you to read.</em></p>
-            `;
-            
-            hideAllSections();
-            document.getElementById('readingInterface').classList.remove('hidden');
-            
-            // Clear previous answers
-            clearAnswers();
-            
-            // Start timer
-            startTimer();
-            
-            // Update progress
+            // Update progress initially
             updateProgress();
             
-            showNotification('Full reading test started! 60 minutes remaining.', 'success');
+            // Show scroll to top button on scroll
+            window.addEventListener('scroll', handleScroll);
+            
+            // Auto-save every 30 seconds
+            setInterval(autoSave, 30000);
+            
+            // Load saved answers if any
+            loadSavedAnswers();
         }
 
         // Timer functions
         function startTimer() {
             if (timerInterval) clearInterval(timerInterval);
-            
-            updateTimerDisplay();
             
             timerInterval = setInterval(() => {
                 timeLeft--;
@@ -1255,7 +1270,7 @@
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
                     showNotification('Time is up! Submitting your answers...', 'error');
-                    setTimeout(() => submitTest(), 2000);
+                    setTimeout(() => submitAnswers(), 2000);
                 }
             }, 1000);
         }
@@ -1266,53 +1281,240 @@
             const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             
             document.getElementById('timeDisplay').textContent = timeString;
+            document.getElementById('timeValue').textContent = timeString;
             
             // Update timer color based on remaining time
             const timerElement = document.getElementById('timer');
             timerElement.classList.remove('warning', 'danger');
             
-            if (isFullTest) {
-                if (timeLeft < 600) timerElement.classList.add('danger');
-                else if (timeLeft < 1200) timerElement.classList.add('warning');
-            } else {
-                if (timeLeft < 300) timerElement.classList.add('danger');
-                else if (timeLeft < 600) timerElement.classList.add('warning');
+            if (timeLeft < 300) timerElement.classList.add('danger');
+            else if (timeLeft < 600) timerElement.classList.add('warning');
+        }
+
+        // Resize functionality
+        function initResizeHandler() {
+            const resizeHandle = document.getElementById('resizeHandle');
+            const passagePanel = document.getElementById('passagePanel');
+            const questionsPanel = document.getElementById('questionsPanel');
+            
+            resizeHandle.addEventListener('mousedown', startResize);
+            
+            function startResize(e) {
+                isResizing = true;
+                resizeStartX = e.clientX;
+                passagePanelWidth = passagePanel.getBoundingClientRect().width / window.innerWidth * 100;
+                
+                document.addEventListener('mousemove', resize);
+                document.addEventListener('mouseup', stopResize);
+                
+                e.preventDefault();
+            }
+            
+            function resize(e) {
+                if (!isResizing) return;
+                
+                const dx = e.clientX - resizeStartX;
+                const containerWidth = document.querySelector('.split-screen').getBoundingClientRect().width;
+                const deltaPercent = (dx / containerWidth) * 100;
+                
+                let newWidth = passagePanelWidth + deltaPercent;
+                
+                // Limit between 30% and 70%
+                newWidth = Math.max(30, Math.min(70, newWidth));
+                
+                passagePanel.style.flex = `0 0 ${newWidth}%`;
+                questionsPanel.style.flex = `0 0 ${100 - newWidth}%`;
+            }
+            
+            function stopResize() {
+                isResizing = false;
+                document.removeEventListener('mousemove', resize);
+                document.removeEventListener('mouseup', stopResize);
             }
         }
 
-        // Update progress
+        // Progress tracking
         function updateProgress() {
             let answered = 0;
-            const total = 13;
+            let trueFalseAnswered = 0;
+            let noteCompletionAnswered = 0;
             
-            // Check radio buttons (questions 1-5)
+            // Check True/False/Not Given questions (1-5)
             for (let i = 1; i <= 5; i++) {
                 const radios = document.querySelectorAll(`input[name="q${i}"]`);
+                let isAnswered = false;
+                
                 for (let radio of radios) {
                     if (radio.checked) {
-                        answered++;
+                        isAnswered = true;
+                        trueFalseAnswered++;
                         break;
+                    }
+                }
+                
+                // Update question status indicator
+                const statusElement = document.querySelector(`#q${i} .status`);
+                if (statusElement) {
+                    statusElement.className = 'status';
+                    if (isAnswered) {
+                        statusElement.classList.add('answered');
                     }
                 }
             }
             
-            // Check text inputs (questions 6-13)
+            // Check Note Completion questions (6-13)
             for (let i = 6; i <= 13; i++) {
                 const input = document.querySelector(`input[name="q${i}"]`);
-                if (input && input.value.trim()) {
-                    answered++;
+                const isAnswered = input && input.value.trim() !== '';
+                
+                // Update question status indicator
+                const statusElement = document.querySelector(`#q${i} .status`);
+                if (statusElement) {
+                    statusElement.className = 'status';
+                    if (isAnswered) {
+                        statusElement.classList.add('answered');
+                        noteCompletionAnswered++;
+                    }
                 }
             }
             
-            const percentage = Math.round((answered / total) * 100);
+            answered = trueFalseAnswered + noteCompletionAnswered;
+            const unanswered = totalQuestions - answered;
+            const percentage = Math.round((answered / totalQuestions) * 100);
             
-            document.getElementById('answeredCount').textContent = answered;
-            document.getElementById('progressPercent').textContent = `${percentage}%`;
+            // Update counters
+            document.getElementById('trueFalseCount').textContent = `${trueFalseAnswered}/5`;
+            document.getElementById('noteCompletionCount').textContent = `${noteCompletionAnswered}/8`;
+            document.getElementById('totalCount').textContent = `${answered}/${totalQuestions}`;
+            
+            // Update progress values
+            document.getElementById('answeredValue').textContent = answered;
+            document.getElementById('unansweredValue').textContent = unanswered;
+            
+            // Update progress bar
             document.getElementById('progressFill').style.width = `${percentage}%`;
+            
+            // Update question navigation
+            updateQuestionNavigation();
+            
+            // Auto-save answers
+            saveAnswers();
+        }
+
+        // Generate question navigation
+        function generateQuestionNavigation() {
+            const navGrid = document.getElementById('questionNavGrid');
+            navGrid.innerHTML = '';
+            
+            for (let i = 1; i <= totalQuestions; i++) {
+                const navItem = document.createElement('div');
+                navItem.className = 'question-nav-item';
+                navItem.textContent = i;
+                navItem.dataset.question = i;
+                
+                navItem.addEventListener('click', () => {
+                    scrollToQuestion(i);
+                });
+                
+                navGrid.appendChild(navItem);
+            }
+            
+            updateQuestionNavigation();
+        }
+
+        function updateQuestionNavigation() {
+            const navItems = document.querySelectorAll('.question-nav-item');
+            
+            navItems.forEach(item => {
+                const questionNum = parseInt(item.dataset.question);
+                item.classList.remove('answered', 'current');
+                
+                // Check if answered
+                if (questionNum <= 5) {
+                    // True/False question
+                    const radios = document.querySelectorAll(`input[name="q${questionNum}"]`);
+                    let isAnswered = false;
+                    for (let radio of radios) {
+                        if (radio.checked) {
+                            isAnswered = true;
+                            break;
+                        }
+                    }
+                    if (isAnswered) {
+                        item.classList.add('answered');
+                    }
+                } else {
+                    // Note completion question
+                    const input = document.querySelector(`input[name="q${questionNum}"]`);
+                    if (input && input.value.trim() !== '') {
+                        item.classList.add('answered');
+                    }
+                }
+                
+                // Check if current
+                if (questionNum === currentQuestion) {
+                    item.classList.add('current');
+                }
+            });
+        }
+
+        // Scroll functions
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function scrollToQuestion(questionNum) {
+            const questionElement = document.getElementById(`q${questionNum}`);
+            if (questionElement) {
+                questionElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                questionElement.style.backgroundColor = 'rgba(67, 97, 238, 0.1)';
+                
+                // Remove highlight after 2 seconds
+                setTimeout(() => {
+                    questionElement.style.backgroundColor = '';
+                }, 2000);
+                
+                currentQuestion = questionNum;
+                updateQuestionNavigation();
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleScroll() {
+            const scrollTopBtn = document.getElementById('scrollTop');
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.display = 'flex';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        }
+
+        // Question navigation panel
+        function showQuestionNavigation() {
+            const nav = document.getElementById('questionNav');
+            if (nav.style.display === 'none' || nav.style.display === '') {
+                nav.style.display = 'block';
+            } else {
+                nav.style.display = 'none';
+            }
+        }
+
+        function hideQuestionNavigation() {
+            document.getElementById('questionNav').style.display = 'none';
         }
 
         // Clear all answers
-        function clearAnswers() {
+        function clearAllAnswers() {
+            if (!confirm('Are you sure you want to clear all answers? This action cannot be undone.')) {
+                return;
+            }
+            
             // Clear radio buttons
             for (let i = 1; i <= 5; i++) {
                 const radios = document.querySelectorAll(`input[name="q${i}"]`);
@@ -1325,12 +1527,24 @@
                 if (input) input.value = '';
             }
             
+            // Clear saved data
+            localStorage.removeItem('ieltsReadingAnswers');
+            localStorage.removeItem('ieltsReadingTime');
+            
             updateProgress();
-            showNotification('All answers cleared', 'success');
+            showNotification('All answers cleared successfully', 'success');
         }
 
-        // Submit test
-        function submitTest() {
+        // Submit answers
+        function submitAnswers() {
+            const answered = parseInt(document.getElementById('answeredValue').textContent);
+            const timeUsed = 1200 - timeLeft;
+            const minutesUsed = Math.floor(timeUsed / 60);
+            const secondsUsed = timeUsed % 60;
+            
+            document.getElementById('modalAnswered').textContent = answered;
+            document.getElementById('modalTimeUsed').textContent = `${minutesUsed}:${secondsUsed.toString().padStart(2, '0')}`;
+            
             document.getElementById('submitModal').style.display = 'flex';
         }
 
@@ -1344,7 +1558,7 @@
             
             // Collect answers
             const answers = {};
-            for (let i = 1; i <= 13; i++) {
+            for (let i = 1; i <= totalQuestions; i++) {
                 if (i <= 5) {
                     const selected = document.querySelector(`input[name="q${i}"]:checked`);
                     answers[`q${i}`] = selected ? selected.value : 'NOT ANSWERED';
@@ -1356,103 +1570,114 @@
             
             // Prepare submission data
             const submissionData = {
-                user: currentUser,
-                passage: currentPassage,
-                isFullTest: isFullTest,
-                timeSpent: isFullTest ? (3600 - timeLeft) : (1200 - timeLeft),
+                passage: 'Building a New Future',
+                timeSpent: 1200 - timeLeft,
                 answers: answers,
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toISOString(),
+                totalQuestions: totalQuestions
             };
             
-            // Send to Telegram via API
-            sendToTelegram(submissionData);
+            // Send to Telegram (simulated for demo)
+            setTimeout(() => {
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('successModal').style.display = 'flex';
+                
+                // For demo purposes, log the submission
+                console.log('Submission Data:', submissionData);
+                
+                // Clear saved data
+                localStorage.removeItem('ieltsReadingAnswers');
+                localStorage.removeItem('ieltsReadingTime');
+                
+                showNotification('Answers submitted successfully!', 'success');
+            }, 2000);
         }
 
-        // Send answers to Telegram
-        async function sendToTelegram(data) {
-            try {
-                // Replace with your actual Telegram bot token and chat ID
-                const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
-                const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID_HERE';
+        // Save/Load answers
+        function saveAnswers() {
+            const answers = {};
+            
+            // Save radio button answers
+            for (let i = 1; i <= 5; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) {
+                    answers[`q${i}`] = selected.value;
+                }
+            }
+            
+            // Save text input answers
+            for (let i = 6; i <= 13; i++) {
+                const input = document.querySelector(`input[name="q${i}"]`);
+                if (input && input.value.trim() !== '') {
+                    answers[`q${i}`] = input.value.trim();
+                }
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('ieltsReadingAnswers', JSON.stringify(answers));
+            localStorage.setItem('ieltsReadingTime', timeLeft.toString());
+        }
+
+        function loadSavedAnswers() {
+            const savedAnswers = localStorage.getItem('ieltsReadingAnswers');
+            const savedTime = localStorage.getItem('ieltsReadingTime');
+            
+            if (savedAnswers) {
+                const answers = JSON.parse(savedAnswers);
                 
-                // Format message for Telegram
-                let message = `📚 *IELTS Reading Test Submission*\n\n`;
-                message += `👤 *Student:* ${data.user.name}\n`;
-                message += `📧 *Email:* ${data.user.email}\n`;
-                message += `📖 *Passage:* ${data.isFullTest ? 'Full Test' : `Passage ${data.passage}`}\n`;
-                message += `⏱️ *Time Spent:* ${Math.floor(data.timeSpent / 60)}:${(data.timeSpent % 60).toString().padStart(2, '0')}\n\n`;
-                message += `📋 *Answers:*\n`;
-                
-                // Add answers
-                for (let i = 1; i <= 13; i++) {
-                    const answer = data.answers[`q${i}`];
-                    message += `${i}. ${answer}\n`;
+                // Load radio button answers
+                for (let i = 1; i <= 5; i++) {
+                    if (answers[`q${i}`]) {
+                        const radio = document.querySelector(`input[name="q${i}"][value="${answers[`q${i}`]}"]`);
+                        if (radio) {
+                            radio.checked = true;
+                        }
+                    }
                 }
                 
-                message += `\n🕒 *Submitted at:* ${new Date().toLocaleString()}`;
-                
-                // For demo purposes, we'll simulate API call
-                // In production, uncomment the fetch code and add your bot token
-                
-                /*
-                const response = await fetch('/api/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        botToken: TELEGRAM_BOT_TOKEN,
-                        chatId: TELEGRAM_CHAT_ID,
-                        message: message
-                    })
-                });
-                
-                if (!response.ok) {
-                    throw new Error('Failed to send to Telegram');
+                // Load text input answers
+                for (let i = 6; i <= 13; i++) {
+                    if (answers[`q${i}`]) {
+                        const input = document.querySelector(`input[name="q${i}"]`);
+                        if (input) {
+                            input.value = answers[`q${i}`];
+                        }
+                    }
                 }
-                */
                 
-                // Simulate API delay
-                setTimeout(() => {
-                    document.getElementById('loading').classList.remove('show');
-                    document.getElementById('successModal').style.display = 'flex';
-                    
-                    // For demo, show the message that would be sent
-                    console.log('Telegram message:', message);
-                    showNotification('Answers sent to Telegram successfully!', 'success');
-                }, 1500);
-                
-            } catch (error) {
-                console.error('Error sending to Telegram:', error);
-                document.getElementById('loading').classList.remove('show');
-                showNotification('Failed to send answers. Please try again.', 'error');
+                showNotification('Previous answers loaded successfully', 'success');
+            }
+            
+            if (savedTime) {
+                timeLeft = parseInt(savedTime);
+                updateTimerDisplay();
             }
         }
 
-        // Return to menu after submission
+        function autoSave() {
+            saveAnswers();
+            // Optional: Show a subtle notification
+            console.log('Auto-saved at', new Date().toLocaleTimeString());
+        }
+
+        // Navigation functions
+        function exitReading() {
+            if (confirm('Are you sure you want to exit? Your progress will be saved.')) {
+                saveAnswers();
+                if (timerInterval) clearInterval(timerInterval);
+                // In a real app, this would navigate back to the main menu
+                alert('Returning to main menu...');
+            }
+        }
+
         function returnToMenu() {
             document.getElementById('successModal').style.display = 'none';
             if (timerInterval) clearInterval(timerInterval);
-            showMainMenu();
+            // In a real app, this would navigate back to the main menu
+            alert('Returning to main menu...');
         }
 
-        // Exit reading interface
-        function exitReading() {
-            if (confirm('Are you sure you want to exit? Your progress will be lost.')) {
-                if (timerInterval) clearInterval(timerInterval);
-                showMainMenu();
-            }
-        }
-
-        // Hide all sections
-        function hideAllSections() {
-            const sections = ['mainMenu', 'passageSelection', 'readingInterface'];
-            sections.forEach(id => {
-                document.getElementById(id).classList.add('hidden');
-            });
-        }
-
-        // Show notification
+        // Notification system
         function showNotification(message, type = 'success') {
             const notification = document.getElementById('notification');
             const title = document.getElementById('notificationTitle');
@@ -1474,32 +1699,8 @@
             }, 3000);
         }
 
-        // Add event listeners for progress tracking
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add change listeners to all inputs
-            for (let i = 1; i <= 5; i++) {
-                const radios = document.querySelectorAll(`input[name="q${i}"]`);
-                radios.forEach(radio => {
-                    radio.addEventListener('change', updateProgress);
-                });
-            }
-            
-            for (let i = 6; i <= 13; i++) {
-                const input = document.querySelector(`input[name="q${i}"]`);
-                if (input) {
-                    input.addEventListener('input', updateProgress);
-                }
-            }
-            
-            // Add Enter key support for login
-            document.getElementById('username').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') login();
-            });
-            
-            document.getElementById('email').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') login();
-            });
-        });
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initReadingInterface);
     </script>
 </body>
 </html>
